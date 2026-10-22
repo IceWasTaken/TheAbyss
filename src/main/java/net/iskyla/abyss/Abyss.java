@@ -7,7 +7,6 @@ import net.iskyla.abyss.command.AbyssDevTeleportCommand;
 import net.iskyla.abyss.item.ItemRegistry;
 import net.minecraft.commands.CommandSourceStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
