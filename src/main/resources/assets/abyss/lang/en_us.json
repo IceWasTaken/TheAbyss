@@ -2,5 +2,8 @@
   "itemGroup.abyss": "The Abyss",
 
   "block.abyss.aquaslate": "Aquaslate",
-  "item.abyss.aquaslate": "Aquaslate"
+  "block.abyss.prismatic_rock": "Prismatic Rock",
+
+  "item.abyss.aquaslate": "Aquaslate",
+  "item.abyss.prismatic_rock": "Prismatic Rock"
 }

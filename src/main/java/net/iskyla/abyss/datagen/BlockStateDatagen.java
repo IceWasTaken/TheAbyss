@@ -21,7 +21,7 @@ public class BlockStateDatagen extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		for(DeferredBlock<?> block : BLOCK_LIST) {
-			simpleBlockWithItem(BlockRegistry.AQUASLATE.get(), cubeAll(BlockRegistry.AQUASLATE.get()));
+			simpleBlockWithItem(block.get(), cubeAll(block.get()));
 		}
 	}
 }

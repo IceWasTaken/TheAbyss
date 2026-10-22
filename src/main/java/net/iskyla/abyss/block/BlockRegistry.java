@@ -14,6 +14,7 @@ public class BlockRegistry {
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Abyss.MODID);
 
 	public static final DeferredBlock<Block> AQUASLATE = cubeAllWithItem("aquaslate", () -> new Block(BlockBehaviour.Properties.of()));
+	public static final DeferredBlock<Block> PRISMATIC_ROCK = cubeAllWithItem("prismatic_rock", () -> new Block(BlockBehaviour.Properties.of()));
 
 	private static <T extends Block> DeferredBlock<T> cubeAllWithItem(String name, Supplier<T> supplier) {
 		DeferredBlock<T> dummy = BLOCKS.register(name, supplier);
