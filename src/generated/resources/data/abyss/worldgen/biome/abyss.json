@@ -1,0 +1,32 @@
+{
+  "carvers": {},
+  "downfall": 0.0,
+  "effects": {
+    "fog_color": 1,
+    "sky_color": 1,
+    "water_color": 1,
+    "water_fog_color": 1
+  },
+  "features": [],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 20,
+        "minCount": 20,
+        "weight": 2
+      }
+    ],
+    "water_creature": []
+  },
+  "temperature": 0.2,
+  "temperature_modifier": "frozen"
+}

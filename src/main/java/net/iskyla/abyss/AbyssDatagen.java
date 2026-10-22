@@ -1,0 +1,33 @@
+package net.iskyla.abyss;
+
+import net.iskyla.abyss.datagen.BlockStateDatagen;
+import net.iskyla.abyss.datagen.DatapackDatagen;
+import net.iskyla.abyss.datagen.ItemModelDatagen;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
+
+import java.util.concurrent.CompletableFuture;
+
+@EventBusSubscriber(modid = Abyss.MODID)
+public class AbyssDatagen {
+
+	@SubscribeEvent
+	public static void gatherClientData(GatherDataEvent event) {
+		DataGenerator gen = event.getGenerator();
+		PackOutput packOut = gen.getPackOutput();
+		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+		CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+
+
+		gen.addProvider(event.includeClient(), new DatapackDatagen(packOut, lookupProvider));
+
+		gen.addProvider(event.includeClient(), new BlockStateDatagen(packOut, existingFileHelper));
+		gen.addProvider(event.includeClient(), new ItemModelDatagen(packOut, existingFileHelper));
+
+	}
+}
