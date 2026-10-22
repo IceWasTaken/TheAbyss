@@ -23,8 +23,6 @@ public class ItemRegistry {
 
 	public static final List<DeferredItem<?>> ITEM_LIST = new ArrayList<>();
 
-	//public static final DeferredItem<Item> RAM = ITEMS.registerSimpleItem("ram");
-
 	public static final DeferredItem<BlockItem> AQUASLATE = register("aquaslate", BlockRegistry.AQUASLATE);
 
 	private static <T extends Item> DeferredItem<T> register(String id, Supplier<T> supplier) {
