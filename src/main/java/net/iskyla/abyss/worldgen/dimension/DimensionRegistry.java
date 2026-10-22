@@ -64,7 +64,7 @@ public class DimensionRegistry {
 		NoiseBasedChunkGenerator multiBiomeGenerator = new NoiseBasedChunkGenerator(
 				MultiNoiseBiomeSource.createFromList(
 						new Climate.ParameterList<>(List.of(
-								Pair.of(Climate.parameters(0.1f, 0.3f, -0.05f, 0f, 0f, 0f, 0f), biomes.getOrThrow(BiomeRegistry.ABYSS))
+								Pair.of(Climate.parameters(0.1f, 0.3f, -0.05f, 0f, 0f, 0f, 0f), biomes.getOrThrow(BiomeRegistry.ABYSSAL_ARCHES))
 						))),
 				noiseGenSettings.getOrThrow(NoiseGeneratorRegistry.ABYSS_NOISE_SETTINGS));
 

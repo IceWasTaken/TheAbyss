@@ -17,16 +17,8 @@
     "misc": [],
     "monster": [],
     "underground_water_creature": [],
-    "water_ambient": [
-      {
-        "type": "minecraft:pufferfish",
-        "maxCount": 20,
-        "minCount": 20,
-        "weight": 2
-      }
-    ],
+    "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2,
-  "temperature_modifier": "frozen"
+  "temperature": 0.2
 }

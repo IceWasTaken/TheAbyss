@@ -2,6 +2,7 @@ package net.iskyla.abyss.worldgen.noise;
 
 import net.iskyla.abyss.Abyss;
 import net.iskyla.abyss.block.BlockRegistry;
+import net.iskyla.abyss.worldgen.density.DensityFunctionRegistry;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -21,6 +22,7 @@ public class NoiseGeneratorRegistry {
 
 	public static void bootstrapNoiseGenerator(BootstrapContext<NoiseGeneratorSettings> context) {
 		HolderGetter<NormalNoise.NoiseParameters> noiseParameters = context.lookup(Registries.NOISE);
+		HolderGetter<DensityFunction> functions = context.lookup(Registries.DENSITY_FUNCTION);
 
 		context.register(ABYSS_NOISE_SETTINGS, new NoiseGeneratorSettings(
 				new NoiseSettings(
@@ -43,52 +45,45 @@ public class NoiseGeneratorRegistry {
 						DensityFunctions.constant(0), //depth
 						DensityFunctions.constant(0), //ridges
 						DensityFunctions.constant(0), //initial density w/out jaggedness
-						DensityFunctions.add(
-								DensityFunctions.constant(-0.7d),
-								DensityFunctions.min(
-										DensityFunctions.rangeChoice(
-												DensityFunctions.noise(
-														noiseParameters.getOrThrow(Noises.CAVE_CHEESE),
-														6d,
-														4d
-												).abs(),
-												0d,
-												0.06d,
-												DensityFunctions.constant(1.2d),
-												DensityFunctions.constant(-1d)
-										),
-										DensityFunctions.rangeChoice(
-												DensityFunctions.noise(
-														noiseParameters.getOrThrow(Noises.NOODLE),
-														5d,
-														5d
-												).abs(),
-												0d,
-												0.06d,
-												DensityFunctions.constant(1.2d),
-												DensityFunctions.constant(-1d)
-										)
-								)
-						),
+						new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ARCHES_FUNCTION)),
 						DensityFunctions.constant(0),
 						DensityFunctions.constant(0),
 						DensityFunctions.constant(0)
 				),
 				SurfaceRules.sequence(
 						SurfaceRules.ifTrue(
-								SurfaceRules.yStartCheck(VerticalAnchor.bottom(), 0),
-								SurfaceRules.sequence(
-										SurfaceRules.ifTrue(
-												SurfaceRules.not(SurfaceRules.yStartCheck(VerticalAnchor.aboveBottom(2), 0)),
-												SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
-										),
-										SurfaceRules.ifTrue(
-												SurfaceRules.yStartCheck(VerticalAnchor.aboveBottom(126), 0),
-												SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
+								SurfaceRules.verticalGradient(
+										"bedrock_floor",
+										VerticalAnchor.aboveBottom(0),
+										VerticalAnchor.aboveBottom(5)
+								),
+								SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
+						),
+						SurfaceRules.ifTrue(
+								SurfaceRules.not(
+										SurfaceRules.verticalGradient(
+												"bedrock_roof",
+												VerticalAnchor.belowTop(5),
+												VerticalAnchor.belowTop(0)
 										)
-								)
-
-						)
+								),
+								SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
+						),
+						SurfaceRules.ifTrue(
+								SurfaceRules.yBlockCheck(
+										VerticalAnchor.belowTop(5),
+										0
+								),
+								SurfaceRules.state(BlockRegistry.PRISMATIC_ROCK.get().defaultBlockState())
+						),
+						SurfaceRules.ifTrue(
+								SurfaceRules.not(SurfaceRules.yBlockCheck(
+										VerticalAnchor.belowTop(251),
+										0
+								)),
+								SurfaceRules.state(BlockRegistry.PRISMATIC_ROCK.get().defaultBlockState())
+						),
+						SurfaceRules.state(BlockRegistry.AQUASLATE.get().defaultBlockState())
 				),
 				List.of(),
 				256,
@@ -96,7 +91,6 @@ public class NoiseGeneratorRegistry {
 				false,
 				false,
 				true
-		)
-		);
+		));
 	}
 }

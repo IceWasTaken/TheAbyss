@@ -6,7 +6,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "abyss:abyss",
+          "biome": "abyss:abyssal_arches",
           "parameters": {
             "continentalness": -0.05,
             "depth": 0.0,

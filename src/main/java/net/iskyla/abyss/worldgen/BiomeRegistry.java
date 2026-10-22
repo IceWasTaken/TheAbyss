@@ -14,17 +14,67 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 
 public class BiomeRegistry {
 
-	public static final ResourceKey<Biome> ABYSS =
-			ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyss"));
+	public static final ResourceKey<Biome> ABYSSAL_ARCHES =
+			ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_arches"));
+
+	public static final ResourceKey<Biome> ABYSSAL_CAVES =
+			ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_caves"));
+
+	public static final ResourceKey<Biome> ABYSSAL_OASIS =
+			ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_oasis"));
+
+	public static final ResourceKey<Biome> ABYSSAL_VENTS =
+			ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_vents"));
 
 	public static void bootstrapBiome(BootstrapContext<Biome> context) {
-		context.register(ABYSS, new Biome.BiomeBuilder()
+		context.register(ABYSSAL_ARCHES, new Biome.BiomeBuilder()
 				.temperature(0.2f)
-				.temperatureAdjustment(Biome.TemperatureModifier.FROZEN)
+				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
 				.downfall(0.0f)
 				.generationSettings(BiomeGenerationSettings.EMPTY)
 				.hasPrecipitation(false)
-				.mobSpawnSettings(new MobSpawnSettings.Builder().addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.PUFFERFISH, 2, 20, 20)).build())
+				.mobSpawnSettings(new MobSpawnSettings.Builder()
+						//.addSpawn()
+				.build())
+				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(1).waterColor(1).waterFogColor(1).skyColor(1).build())
+				.build()
+		);
+
+		context.register(ABYSSAL_CAVES, new Biome.BiomeBuilder()
+				.temperature(0.2f)
+				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
+				.downfall(0.0f)
+				.generationSettings(BiomeGenerationSettings.EMPTY)
+				.hasPrecipitation(false)
+				.mobSpawnSettings(new MobSpawnSettings.Builder()
+						//.addSpawn()
+						.build())
+				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(1).waterColor(1).waterFogColor(1).skyColor(1).build())
+				.build()
+		);
+
+		context.register(ABYSSAL_OASIS, new Biome.BiomeBuilder()
+				.temperature(0.2f)
+				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
+				.downfall(0.0f)
+				.generationSettings(BiomeGenerationSettings.EMPTY)
+				.hasPrecipitation(false)
+				.mobSpawnSettings(new MobSpawnSettings.Builder()
+						//.addSpawn()
+						.build())
+				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(1).waterColor(1).waterFogColor(1).skyColor(1).build())
+				.build()
+		);
+
+		context.register(ABYSSAL_VENTS, new Biome.BiomeBuilder()
+				.temperature(0.2f)
+				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
+				.downfall(0.0f)
+				.generationSettings(BiomeGenerationSettings.EMPTY)
+				.hasPrecipitation(false)
+				.mobSpawnSettings(new MobSpawnSettings.Builder()
+						//.addSpawn()
+						.build())
 				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(1).waterColor(1).waterFogColor(1).skyColor(1).build())
 				.build()
 		);
