@@ -3,7 +3,10 @@
 
   "block.abyss.aquaslate": "Aquaslate",
   "block.abyss.prismatic_rock": "Prismatic Rock",
+  "block.abyss.yellow_kelp": "Yellow Kelp",
+  "block.abyss.yellow_kelp_plant": "Yellow Kelp",
 
   "item.abyss.aquaslate": "Aquaslate",
-  "item.abyss.prismatic_rock": "Prismatic Rock"
+  "item.abyss.prismatic_rock": "Prismatic Rock",
+  "item.abyss.yellow_kelp": "Yellow Kelp"
 }

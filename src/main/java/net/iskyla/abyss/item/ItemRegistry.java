@@ -25,6 +25,7 @@ public class ItemRegistry {
 
 	public static final DeferredItem<BlockItem> AQUASLATE = register("aquaslate", BlockRegistry.AQUASLATE);
 	public static final DeferredItem<BlockItem> PRISMATIC_ROCK = register("prismatic_rock", BlockRegistry.PRISMATIC_ROCK);
+	public static final DeferredItem<BlockItem> YELLOW_KELP = register("yellow_kelp", BlockRegistry.YELLOW_KELP);
 
 	private static <T extends Item> DeferredItem<T> register(String id, Supplier<T> supplier) {
 		DeferredItem<T> dummy = ITEMS.register(id, supplier);
