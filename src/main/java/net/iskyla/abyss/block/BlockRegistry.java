@@ -17,8 +17,16 @@ public class BlockRegistry {
 
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Abyss.MODID);
 
-	public static final DeferredBlock<Block> AQUASLATE = cubeAllWithItem("aquaslate", () -> new Block(BlockBehaviour.Properties.of()));
-	public static final DeferredBlock<Block> PRISMATIC_ROCK = cubeAllWithItem("prismatic_rock", () -> new Block(BlockBehaviour.Properties.of()));
+	public static final DeferredBlock<Block> AQUASLATE = cubeAllWithItem("aquaslate", () -> new Block(BlockBehaviour.Properties.of()
+			.destroyTime(1.1f)));
+	public static final DeferredBlock<Block> PRISMATIC_ROCK = cubeAllWithItem("prismatic_rock", () -> new Block(BlockBehaviour.Properties.of().destroyTime(0.95f)));
+
+	public static final DeferredBlock<Block> AQUASLATE_DIAMOND = cubeAllWithItem("aquaslate_diamond", () -> new Block(BlockBehaviour.Properties.of()
+			.destroyTime(1.2f)));
+	public static final DeferredBlock<Block> AQUASLATE_GOLD = cubeAllWithItem("aquaslate_gold", () -> new Block(BlockBehaviour.Properties.of().destroyTime(1.2f)));
+	public static final DeferredBlock<Block> AQUASLATE_IRON = cubeAllWithItem("aquaslate_iron", () -> new Block(BlockBehaviour.Properties.of().destroyTime(1.2f)));
+	public static final DeferredBlock<Block> AQUASLATE_REDSTONE = cubeAllWithItem("aquaslate_redstone", () -> new Block(BlockBehaviour.Properties.of().destroyTime(1.2f)));
+	public static final DeferredBlock<Block> AQUASLATE_LAPIS = cubeAllWithItem("aquaslate_lapis", () -> new Block(BlockBehaviour.Properties.of().destroyTime(1.2f)));
 
 	public static final DeferredBlock<YellowKelpBlock> YELLOW_KELP = cross("yellow_kelp", () -> new YellowKelpBlock(
 			BlockBehaviour.Properties.of()

@@ -1,0 +1,12 @@
+// 1.21.1	2026-10-23T13:01:23.27675893	Registries
+cfa92f6607c4983caf8e8eb47fad51151a7d75ed data/abyss/dimension/abyss.json
+503a40953def70e0fe8c094689d2f83fe67a84a5 data/abyss/dimension_type/abyss.json
+aef631e10e4fe56ccf37eb939d03782b5fbe410b data/abyss/worldgen/biome/abyssal_arches.json
+5c6d19afa1d160bc71575c34e86159e4d867f39d data/abyss/worldgen/biome/abyssal_caves.json
+abe6c9f9bbd25d17f5550a81ed222c233eea023b data/abyss/worldgen/biome/abyssal_oasis.json
+d07fe05bc46ff10ab9d55f79d6483c58e4e26fe7 data/abyss/worldgen/biome/abyssal_vents.json
+04a38b97949002285c99635863504f92deebac94 data/abyss/worldgen/density_function/abyss_temperature.json
+f40b02c1e82a897b1075745348eab93cc77549c7 data/abyss/worldgen/density_function/abyssal_arches_func.json
+04c38d2ba1fba16ca762f71e726b4ea92b0aa25b data/abyss/worldgen/density_function/abyssal_caves_func.json
+b2bb056976ef8844c83f72ea3fc989b8321f34a2 data/abyss/worldgen/density_function/abyssal_ceiling_floor.json
+c468cb0d6830f5bdc70ec5111ff7ad0e5975ab20 data/abyss/worldgen/noise_settings/abyss.json

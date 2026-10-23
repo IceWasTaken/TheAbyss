@@ -27,6 +27,13 @@ public class ItemRegistry {
 	public static final DeferredItem<BlockItem> PRISMATIC_ROCK = register("prismatic_rock", BlockRegistry.PRISMATIC_ROCK);
 	public static final DeferredItem<BlockItem> YELLOW_KELP = register("yellow_kelp", BlockRegistry.YELLOW_KELP);
 
+	public static final DeferredItem<BlockItem> AQUASLATE_DIAMOND = register("aquaslate_diamond", BlockRegistry.AQUASLATE_DIAMOND);
+	public static final DeferredItem<BlockItem> AQUASLATE_GOLD = register("aquaslate_gold", BlockRegistry.AQUASLATE_GOLD);
+	public static final DeferredItem<BlockItem> AQUASLATE_IRON = register("aquaslate_iron", BlockRegistry.AQUASLATE_IRON);
+	public static final DeferredItem<BlockItem> AQUASLATE_REDSTONE = register("aquaslate_redstone", BlockRegistry.AQUASLATE_REDSTONE);
+	public static final DeferredItem<BlockItem> AQUASLATE_LAPIS = register("aquaslate_lapis", BlockRegistry.AQUASLATE_LAPIS);
+
+
 	private static <T extends Item> DeferredItem<T> register(String id, Supplier<T> supplier) {
 		DeferredItem<T> dummy = ITEMS.register(id, supplier);
 		ITEM_LIST.add(dummy);

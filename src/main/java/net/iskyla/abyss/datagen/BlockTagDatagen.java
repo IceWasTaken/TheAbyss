@@ -1,6 +1,7 @@
 package net.iskyla.abyss.datagen;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.block.BlockRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -20,6 +21,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-
+		this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+				.add(BlockRegistry.AQUASLATE_DIAMOND.get())
+				.add(BlockRegistry.AQUASLATE.get());
 	}
 }
