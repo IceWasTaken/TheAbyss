@@ -38,14 +38,17 @@ public class NoiseGeneratorRegistry {
 						DensityFunctions.constant(0), //fluid level floodedness
 						DensityFunctions.constant(0), //fluid level spread
 						DensityFunctions.constant(0), //lava
-						DensityFunctions.constant(0), //temperature
+						new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSS_TEMPERATURE)),
 						DensityFunctions.constant(0), //vegetation
 						DensityFunctions.constant(0), //continents
 						DensityFunctions.constant(0), //erosion
 						DensityFunctions.constant(0), //depth
 						DensityFunctions.constant(0), //ridges
 						DensityFunctions.constant(0), //initial density w/out jaggedness
-						new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ARCHES_FUNCTION)),
+						DensityFunctions.add(
+								new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_CEILING_FLOOR_FUNCTION)),
+								new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_ARCHES_FUNCTION))
+						),
 						DensityFunctions.constant(0),
 						DensityFunctions.constant(0),
 						DensityFunctions.constant(0)
@@ -78,7 +81,7 @@ public class NoiseGeneratorRegistry {
 						),
 						SurfaceRules.ifTrue(
 								SurfaceRules.not(SurfaceRules.yBlockCheck(
-										VerticalAnchor.belowTop(251),
+										VerticalAnchor.aboveBottom(10),
 										0
 								)),
 								SurfaceRules.state(BlockRegistry.PRISMATIC_ROCK.get().defaultBlockState())

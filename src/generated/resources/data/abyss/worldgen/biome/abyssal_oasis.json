@@ -2,7 +2,7 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 1,
+    "fog_color": 16711680,
     "sky_color": 1,
     "water_color": 1,
     "water_fog_color": 1
@@ -20,5 +20,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.2
+  "temperature": 0.8
 }

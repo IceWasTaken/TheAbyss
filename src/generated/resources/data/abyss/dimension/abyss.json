@@ -8,12 +8,60 @@
         {
           "biome": "abyss:abyssal_arches",
           "parameters": {
-            "continentalness": -0.05,
+            "continentalness": 0.0,
             "depth": 0.0,
             "erosion": 0.0,
-            "humidity": 0.3,
+            "humidity": 0.0,
             "offset": 0.0,
-            "temperature": 0.1,
+            "temperature": [
+              0.0,
+              0.6
+            ],
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "abyss:abyssal_caves",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 0.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": [
+              0.5,
+              1.1
+            ],
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "abyss:abyssal_oasis",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 0.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": [
+              1.0,
+              1.6
+            ],
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "abyss:abyssal_vents",
+          "parameters": {
+            "continentalness": 0.0,
+            "depth": 0.0,
+            "erosion": 0.0,
+            "humidity": 0.0,
+            "offset": 0.0,
+            "temperature": [
+              1.4,
+              2.0
+            ],
             "weirdness": 0.0
           }
         }

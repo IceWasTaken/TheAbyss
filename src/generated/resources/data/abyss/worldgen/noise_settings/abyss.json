@@ -22,13 +22,17 @@
     "continents": 0.0,
     "depth": 0.0,
     "erosion": 0.0,
-    "final_density": "abyss:arches",
+    "final_density": {
+      "type": "minecraft:add",
+      "argument1": "abyss:abyssal_ceiling_floor",
+      "argument2": "abyss:abyssal_arches_func"
+    },
     "fluid_level_floodedness": 0.0,
     "fluid_level_spread": 0.0,
     "initial_density_without_jaggedness": 0.0,
     "lava": 0.0,
     "ridges": 0.0,
-    "temperature": 0.0,
+    "temperature": "abyss:abyss_temperature",
     "vegetation": 0.0,
     "vein_gap": 0.0,
     "vein_ridged": 0.0,
@@ -90,6 +94,26 @@
             "below_top": 5
           },
           "surface_depth_multiplier": 0
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "abyss:prismatic_rock"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:not",
+          "invert": {
+            "type": "minecraft:y_above",
+            "add_stone_depth": false,
+            "anchor": {
+              "above_bottom": 10
+            },
+            "surface_depth_multiplier": 0
+          }
         },
         "then_run": {
           "type": "minecraft:block",

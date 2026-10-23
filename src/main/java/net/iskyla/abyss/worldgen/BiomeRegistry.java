@@ -28,7 +28,7 @@ public class BiomeRegistry {
 
 	public static void bootstrapBiome(BootstrapContext<Biome> context) {
 		context.register(ABYSSAL_ARCHES, new Biome.BiomeBuilder()
-				.temperature(0.2f)
+				.temperature(0.0f)
 				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
 				.downfall(0.0f)
 				.generationSettings(BiomeGenerationSettings.EMPTY)
@@ -41,7 +41,7 @@ public class BiomeRegistry {
 		);
 
 		context.register(ABYSSAL_CAVES, new Biome.BiomeBuilder()
-				.temperature(0.2f)
+				.temperature(0.5f)
 				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
 				.downfall(0.0f)
 				.generationSettings(BiomeGenerationSettings.EMPTY)
@@ -54,7 +54,7 @@ public class BiomeRegistry {
 		);
 
 		context.register(ABYSSAL_OASIS, new Biome.BiomeBuilder()
-				.temperature(0.2f)
+				.temperature(0.8f)
 				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
 				.downfall(0.0f)
 				.generationSettings(BiomeGenerationSettings.EMPTY)
@@ -62,12 +62,12 @@ public class BiomeRegistry {
 				.mobSpawnSettings(new MobSpawnSettings.Builder()
 						//.addSpawn()
 						.build())
-				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(1).waterColor(1).waterFogColor(1).skyColor(1).build())
+				.specialEffects(new BiomeSpecialEffects.Builder().fogColor(0xFF0000).waterColor(1).waterFogColor(1).skyColor(1).build())
 				.build()
 		);
 
 		context.register(ABYSSAL_VENTS, new Biome.BiomeBuilder()
-				.temperature(0.2f)
+				.temperature(2f)
 				.temperatureAdjustment(Biome.TemperatureModifier.NONE)
 				.downfall(0.0f)
 				.generationSettings(BiomeGenerationSettings.EMPTY)

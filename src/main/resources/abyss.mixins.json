@@ -4,6 +4,7 @@
   "package": "net.iskyla.abyss.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "IBlockExtensionMixin"
   ],
   "client": [
   ],

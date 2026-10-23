@@ -4,6 +4,7 @@ import com.mojang.datafixers.util.Pair;
 import net.iskyla.abyss.Abyss;
 import net.iskyla.abyss.worldgen.BiomeRegistry;
 import net.iskyla.abyss.worldgen.noise.NoiseGeneratorRegistry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -13,6 +14,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.biome.MultiNoiseBiomeSource;
+import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
@@ -45,7 +47,7 @@ public class DimensionRegistry {
 				256,
 				256,
 				BlockTags.INFINIBURN_OVERWORLD,
-				ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyss"),
+				BuiltinDimensionTypes.END_EFFECTS,
 				0.1f,
 				new DimensionType.MonsterSettings(
 						false,
@@ -64,8 +66,57 @@ public class DimensionRegistry {
 		NoiseBasedChunkGenerator multiBiomeGenerator = new NoiseBasedChunkGenerator(
 				MultiNoiseBiomeSource.createFromList(
 						new Climate.ParameterList<>(List.of(
-								Pair.of(Climate.parameters(0.1f, 0.3f, -0.05f, 0f, 0f, 0f, 0f), biomes.getOrThrow(BiomeRegistry.ABYSSAL_ARCHES))
-						))),
+								Pair.of(
+										Climate.parameters(
+												Climate.Parameter.span(0f, 0.6f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												0f
+										),
+										biomes.getOrThrow(BiomeRegistry.ABYSSAL_ARCHES)
+								),
+								Pair.of(
+										Climate.parameters(
+												Climate.Parameter.span(0.5f, 1.1f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												0f
+										),
+										biomes.getOrThrow(BiomeRegistry.ABYSSAL_CAVES)
+								),
+								Pair.of(
+										Climate.parameters(
+												Climate.Parameter.span(1f, 1.6f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												0f
+										),
+										biomes.getOrThrow(BiomeRegistry.ABYSSAL_OASIS)
+								),
+								Pair.of(
+										Climate.parameters(
+												Climate.Parameter.span(1.4f, 2f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												Climate.Parameter.point(0f),
+												0f
+										),
+										biomes.getOrThrow(BiomeRegistry.ABYSSAL_VENTS)
+								)
+						))
+				),
+
 				noiseGenSettings.getOrThrow(NoiseGeneratorRegistry.ABYSS_NOISE_SETTINGS));
 
 		context.register(OCEAN_DIM_KEY, new LevelStem(dimensionTypes.getOrThrow(OCEAN_DIMENSION_TYPE_KEY), multiBiomeGenerator));
