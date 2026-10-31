@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "abyss:block/aquaslate",
+    "side": "abyss:block/aquaslate",
+    "top": "abyss:block/aquaslate"
+  }
+}

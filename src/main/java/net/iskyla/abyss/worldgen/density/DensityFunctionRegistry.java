@@ -18,6 +18,9 @@ public class DensityFunctionRegistry {
 	public static final ResourceKey<DensityFunction> ABYSSAL_CEILING_FLOOR_FUNCTION =
 			ResourceKey.create(Registries.DENSITY_FUNCTION, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_ceiling_floor"));
 
+	public static final ResourceKey<DensityFunction> ABYSSAL_CEILING_FLOOR_TERRAIN_FUNCTION =
+			ResourceKey.create(Registries.DENSITY_FUNCTION, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_ceiling_floor_terrain"));
+
 	public static final ResourceKey<DensityFunction> ABYSSAL_ARCHES_FUNCTION =
 			ResourceKey.create(Registries.DENSITY_FUNCTION, ResourceLocation.fromNamespaceAndPath(Abyss.MODID, "abyssal_arches_func"));
 
@@ -35,17 +38,49 @@ public class DensityFunctionRegistry {
 				DensityFunctions.add(
 						DensityFunctions.yClampedGradient(
 								256,
-								248,
+								240,
 								5,
 								0
 						),
 						DensityFunctions.yClampedGradient(
 								0,
-								8,
+								16,
 								5,
 								0
 						)
 				)
+		);
+
+		context.register(ABYSSAL_CEILING_FLOOR_TERRAIN_FUNCTION,
+				DensityFunctions.add(
+						DensityFunctions.mul(
+								DensityFunctions.noise(
+										noiseParameters.getOrThrow(Noises.TEMPERATURE),
+										3d,
+										7d
+								),
+								DensityFunctions.yClampedGradient(
+										240,
+										232,
+										-2,
+										0
+								)
+						),
+						DensityFunctions.mul(
+								DensityFunctions.noise(
+										noiseParameters.getOrThrow(Noises.TEMPERATURE),
+										-3,
+										-7
+								),
+								DensityFunctions.yClampedGradient(
+										16,
+										32,
+										-2,
+										0
+								)
+						)
+				)
+
 		);
 
 		context.register(ABYSSAL_ARCHES_FUNCTION,

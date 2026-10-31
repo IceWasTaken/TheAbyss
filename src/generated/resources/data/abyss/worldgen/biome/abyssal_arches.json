@@ -7,7 +7,15 @@
     "water_color": 1,
     "water_fog_color": 1
   },
-  "features": [],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "abyss:testing"
+    ]
+  ],
   "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {

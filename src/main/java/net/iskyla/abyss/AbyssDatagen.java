@@ -27,6 +27,7 @@ public class AbyssDatagen {
 		gen.addProvider(event.includeClient(), new BlockStateDatagen(packOut, existingFileHelper));
 		gen.addProvider(event.includeClient(), new ItemModelDatagen(packOut, existingFileHelper));
 		gen.addProvider(event.includeServer(), new DropTableProvider(packOut, lookupProvider));
+		gen.addProvider(event.includeServer(), new BlockTagDatagen(packOut, lookupProvider, existingFileHelper));
 
 	}
 }

@@ -5,6 +5,8 @@ import net.iskyla.abyss.worldgen.BiomeModifierRegistry;
 import net.iskyla.abyss.worldgen.BiomeRegistry;
 import net.iskyla.abyss.worldgen.density.DensityFunctionRegistry;
 import net.iskyla.abyss.worldgen.dimension.DimensionRegistry;
+import net.iskyla.abyss.worldgen.feature.ConfiguredFeatureRegistry;
+import net.iskyla.abyss.worldgen.feature.PlacedFeatureRegistry;
 import net.iskyla.abyss.worldgen.noise.NoiseGeneratorRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -26,7 +28,9 @@ public class DatapackDatagen extends DatapackBuiltinEntriesProvider {
 			.add(Registries.DENSITY_FUNCTION, DensityFunctionRegistry::bootstrap)
 			.add(Registries.NOISE_SETTINGS, NoiseGeneratorRegistry::bootstrapNoiseGenerator)
 			.add(Registries.LEVEL_STEM, DimensionRegistry::bootstrapStem)
-			.add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, BiomeModifierRegistry::bootstrapModifiers);
+			.add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, BiomeModifierRegistry::bootstrapModifiers)
+			.add(Registries.PLACED_FEATURE, PlacedFeatureRegistry::bootstrapFeatures)
+			.add(Registries.CONFIGURED_FEATURE, ConfiguredFeatureRegistry::bootstrapFeatures);
 
 
 

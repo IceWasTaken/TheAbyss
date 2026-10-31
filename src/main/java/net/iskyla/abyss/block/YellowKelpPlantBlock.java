@@ -1,5 +1,6 @@
 package net.iskyla.abyss.block;
 
+import net.iskyla.abyss.registry.BlockRegistry;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.KelpPlantBlock;
 

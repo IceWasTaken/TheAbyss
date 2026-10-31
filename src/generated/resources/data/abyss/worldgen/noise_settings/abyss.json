@@ -24,7 +24,11 @@
     "erosion": 0.0,
     "final_density": {
       "type": "minecraft:add",
-      "argument1": "abyss:abyssal_ceiling_floor",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "abyss:abyssal_ceiling_floor",
+        "argument2": "abyss:abyssal_ceiling_floor_terrain"
+      },
       "argument2": "abyss:abyssal_arches_func"
     },
     "fluid_level_floodedness": 0.0,

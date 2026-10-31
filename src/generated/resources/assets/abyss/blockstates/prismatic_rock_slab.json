@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abyss:block/prismatic_rock_slab"
+    },
+    "type=double": {
+      "model": "abyss:block/prismatic_rock"
+    },
+    "type=top": {
+      "model": "abyss:block/prismatic_rock_slab_top"
+    }
+  }
+}

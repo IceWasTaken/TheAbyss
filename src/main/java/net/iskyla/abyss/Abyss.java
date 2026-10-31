@@ -2,9 +2,11 @@ package net.iskyla.abyss;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.logging.LogUtils;
-import net.iskyla.abyss.block.BlockRegistry;
+import net.iskyla.abyss.registry.BlockRegistry;
 import net.iskyla.abyss.command.AbyssDevTeleportCommand;
-import net.iskyla.abyss.item.ItemRegistry;
+import net.iskyla.abyss.registry.EntityRegistry;
+import net.iskyla.abyss.registry.FeatureRegistry;
+import net.iskyla.abyss.registry.ItemRegistry;
 import net.minecraft.commands.CommandSourceStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -17,12 +19,14 @@ import org.slf4j.Logger;
 public class Abyss {
 
 	public static final String MODID = "abyss";
-	private static final Logger LOGGER = LogUtils.getLogger();
+	public static final Logger LOGGER = LogUtils.getLogger();
 
 	public Abyss(IEventBus modEventBus, ModContainer modContainer) {
 		//modEventBus.register(this);
 		NeoForge.EVENT_BUS.addListener(Abyss::onRegisterCommands);
 
+		FeatureRegistry.FEATURES.register(modEventBus);
+		EntityRegistry.ENTITIES.register(modEventBus);
 		BlockRegistry.BLOCKS.register(modEventBus);
 		ItemRegistry.ITEMS.register(modEventBus);
 		ItemRegistry.CREATIVE_MODE_TABS.register(modEventBus);

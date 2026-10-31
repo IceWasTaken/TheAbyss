@@ -1,10 +1,17 @@
-// 1.21.1	2026-10-23T13:01:23.277293544	Item Models: abyss
+// 1.21.1	2026-10-29T17:01:13.152670073	Item Models: abyss
 50b787adcbd36333863a4fd104e982bf6b1fa59e assets/abyss/models/item/aquaslate.json
 618fc48179922d001ff0ce12786e8aa2e4520abb assets/abyss/models/item/aquaslate_diamond.json
 43131a7136e788324df78d63a3019f53f307a9ae assets/abyss/models/item/aquaslate_gold.json
 c099a53402074e8c7867ca846cc7220b43fae380 assets/abyss/models/item/aquaslate_iron.json
 f6279b910c456a530c4235528ebd3f129f143448 assets/abyss/models/item/aquaslate_lapis.json
 277b2005030f70e1546fe8f2c448c46804649a35 assets/abyss/models/item/aquaslate_redstone.json
+187d01c9a36de6c43b2250063b95cddd28524a82 assets/abyss/models/item/aquaslate_slab.json
+5e06e5d9c6ce26744768cf24cd59630e6212dc9d assets/abyss/models/item/aquaslate_stairs.json
+7eb2d8f9caf8746c61fe1cfd02f521cc1400b33b assets/abyss/models/item/aquaslate_wall.json
+35b1b5df88d5fe2f0c000c352c353668c3f90fa2 assets/abyss/models/item/cubic_coral_block.json
 ff8046e2b77323ddb5970829f31ad3eeca6c42b1 assets/abyss/models/item/prismatic_rock.json
+d52d995a289e6f1b969d6f78d4160af209b00dbf assets/abyss/models/item/prismatic_rock_slab.json
+6a267268532d880a8fb932b0f89f7284834ecc40 assets/abyss/models/item/prismatic_rock_stairs.json
+a11471f6221500456acc65b766ff9181d4feffeb assets/abyss/models/item/prismatic_rock_wall.json
 2406a8d122101151ee89bf7252572b30b2771e08 assets/abyss/models/item/yellow_kelp.json
 fc305ca34240e8e62033fd843d717002e45606b7 assets/abyss/models/item/yellow_kelp_plant.json

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "abyss:block/aquaslate_slab"
+    },
+    "type=double": {
+      "model": "abyss:block/aquaslate"
+    },
+    "type=top": {
+      "model": "abyss:block/aquaslate_slab_top"
+    }
+  }
+}

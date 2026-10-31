@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "abyss:block/prismatic_rock",
+    "side": "abyss:block/prismatic_rock",
+    "top": "abyss:block/prismatic_rock"
+  }
+}

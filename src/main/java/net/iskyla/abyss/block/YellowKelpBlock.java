@@ -1,6 +1,7 @@
 package net.iskyla.abyss.block;
 
 import com.mojang.serialization.MapCodec;
+import net.iskyla.abyss.registry.BlockRegistry;
 import net.minecraft.world.level.block.*;
 
 public class YellowKelpBlock extends KelpBlock {

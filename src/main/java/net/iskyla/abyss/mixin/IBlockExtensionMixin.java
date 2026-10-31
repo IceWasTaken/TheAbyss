@@ -1,6 +1,6 @@
 package net.iskyla.abyss.mixin;
 
-import net.iskyla.abyss.block.BlockRegistry;
+import net.iskyla.abyss.registry.BlockRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;

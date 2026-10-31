@@ -1,7 +1,7 @@
 package net.iskyla.abyss.worldgen.noise;
 
 import net.iskyla.abyss.Abyss;
-import net.iskyla.abyss.block.BlockRegistry;
+import net.iskyla.abyss.registry.BlockRegistry;
 import net.iskyla.abyss.worldgen.density.DensityFunctionRegistry;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -46,7 +46,10 @@ public class NoiseGeneratorRegistry {
 						DensityFunctions.constant(0), //ridges
 						DensityFunctions.constant(0), //initial density w/out jaggedness
 						DensityFunctions.add(
-								new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_CEILING_FLOOR_FUNCTION)),
+								DensityFunctions.add(
+										new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_CEILING_FLOOR_FUNCTION)),
+										new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_CEILING_FLOOR_TERRAIN_FUNCTION))
+								),
 								new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionRegistry.ABYSSAL_ARCHES_FUNCTION))
 						),
 						DensityFunctions.constant(0),
