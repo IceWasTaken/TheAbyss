@@ -1,7 +1,9 @@
 package net.iskyla.abyss.event;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.entity.AnglerfishEntity;
 import net.iskyla.abyss.entity.BonefishEntity;
+import net.iskyla.abyss.entity.client.AnglerfishRenderer;
 import net.iskyla.abyss.entity.client.BonefishRenderer;
 import net.iskyla.abyss.entity.trident.FancyTridentModel;
 import net.iskyla.abyss.entity.trident.TridentEntityRenderer;
@@ -24,6 +26,8 @@ public class ClientEvents {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(EntityRegistry.FANCY_TRIDENT.get(), TridentEntityRenderer::new);
 		event.registerEntityRenderer(EntityRegistry.BONEFISH.get(), BonefishRenderer::new);
+		event.registerEntityRenderer(EntityRegistry.ANGLERFISH.get(), AnglerfishRenderer::new);
+
 	}
 
 	@SubscribeEvent
@@ -39,5 +43,7 @@ public class ClientEvents {
 	@SubscribeEvent
 	public static void registerEntityAttributes(EntityAttributeCreationEvent event) {
 		event.put(EntityRegistry.BONEFISH.get(), BonefishEntity.setAttributes());
+		event.put(EntityRegistry.ANGLERFISH.get(), AnglerfishEntity.setAttributes());
+
 	}
 }

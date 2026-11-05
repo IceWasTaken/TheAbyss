@@ -1,6 +1,7 @@
 package net.iskyla.abyss.registry;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.entity.AnglerfishEntity;
 import net.iskyla.abyss.entity.BonefishEntity;
 import net.iskyla.abyss.entity.trident.AbstractThrownTrident;
 import net.iskyla.abyss.entity.trident.FancyThrownTrident;
@@ -38,6 +39,14 @@ public class EntityRegistry {
 					BonefishEntity::new,
 					MobCategory.CREATURE,
 					(b) -> b.sized(0.5f, 0.5f)
+			);
+
+	public static final Supplier<EntityType<AnglerfishEntity>> ANGLERFISH =
+			register(
+					"anglerfish",
+					AnglerfishEntity::new,
+					MobCategory.CREATURE,
+					(b) -> b.sized(2f, 2f)
 			);
 
 
