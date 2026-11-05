@@ -1,4 +1,4 @@
-// 1.21.1	2026-11-04T10:51:57.60852676	Registries
+// 1.21.1	2026-11-05T01:13:50.662471482	Registries
 f9dc5293bc99e2e7dc396dc4ac8645ee304aa566 data/abyss/dimension/abyss.json
 503a40953def70e0fe8c094689d2f83fe67a84a5 data/abyss/dimension_type/abyss.json
 aef631e10e4fe56ccf37eb939d03782b5fbe410b data/abyss/worldgen/biome/abyssal_arches.json
@@ -17,8 +17,8 @@ ea64bdfa13dde31186e4dbaa69211ec4db412027 data/abyss/worldgen/noise_settings/abys
 2a110400ac1795c4b9bac247745d150e40b30630 data/abyss/worldgen/placed_feature/large_abyssal_vent.json
 8d8970978250b4fb5af7b2d5c3b3728c647b83e9 data/abyss/worldgen/placed_feature/medium_abyssal_vent.json
 5da9965d522d11eef1d62ad8528ff883aa6fc213 data/abyss/worldgen/placed_feature/small_abyssal_vent.json
-407cfaed23a46fcc7c2c9ddf721c9939208f3ee2 data/abyss/worldgen/structure/abyss_portal_abyss.json
-54a4e879bc81429b75822fb91fcc6f9d0a6ed7e1 data/abyss/worldgen/structure/abyss_portal_overworld.json
+e61821314f445dc741d7a44befda63c5ff075cbf data/abyss/worldgen/structure/abyss_portal_abyss.json
+0d6376c3ea75900dfcca6f87a37793d7303db515 data/abyss/worldgen/structure/abyss_portal_overworld.json
 6014c050e43fdba9d230f48a87738cb974fd9f20 data/abyss/worldgen/structure_set/abyss_portal_abyss.json
 aa4adf8e361ab44a293b6792fc1452cc66d3d40d data/abyss/worldgen/structure_set/abyss_portal_overworld.json
 924e6ab5432ada62105daf292c4c04537ae931b0 data/abyss/worldgen/template_pool/abyss_portal_abyss.json

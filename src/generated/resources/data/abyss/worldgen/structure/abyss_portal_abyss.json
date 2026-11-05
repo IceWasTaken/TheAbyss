@@ -9,7 +9,14 @@
   "spawn_overrides": {
     "underground_water_creature": {
       "bounding_box": "full",
-      "spawns": []
+      "spawns": [
+        {
+          "type": "abyss:bonefish",
+          "maxCount": 6,
+          "minCount": 1,
+          "weight": 1
+        }
+      ]
     }
   },
   "step": "surface_structures"

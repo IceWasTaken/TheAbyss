@@ -1,6 +1,7 @@
 package net.iskyla.abyss.worldgen.structure;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.registry.EntityRegistry;
 import net.iskyla.abyss.worldgen.biome.BiomeDatagen;
 import net.iskyla.abyss.worldgen.biome.BiomeTagDatagen;
 import net.iskyla.abyss.worldgen.structure.portal.AbyssPortalAbyssStructure;
@@ -10,6 +11,7 @@ import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.random.WeightedRandomList;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -41,7 +43,11 @@ public class StructureDatagen {
 										MobCategory.UNDERGROUND_WATER_CREATURE,
 										new StructureSpawnOverride(
 												StructureSpawnOverride.BoundingBoxType.STRUCTURE,
-												MobSpawnSettings.EMPTY_MOB_LIST
+												WeightedRandomList.create(
+														new MobSpawnSettings.SpawnerData(
+																EntityRegistry.BONEFISH.get(), 1, 1, 6
+														)
+												)
 										)
 								)
 								)
@@ -63,7 +69,11 @@ public class StructureDatagen {
 										MobCategory.UNDERGROUND_WATER_CREATURE,
 										new StructureSpawnOverride(
 												StructureSpawnOverride.BoundingBoxType.STRUCTURE,
-												MobSpawnSettings.EMPTY_MOB_LIST
+												WeightedRandomList.create(
+														new MobSpawnSettings.SpawnerData(
+																EntityRegistry.BONEFISH.get(), 1, 1, 6
+														)
+												)
 										)
 								)
 								)

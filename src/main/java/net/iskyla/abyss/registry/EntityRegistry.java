@@ -1,6 +1,7 @@
 package net.iskyla.abyss.registry;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.entity.BonefishEntity;
 import net.iskyla.abyss.entity.trident.AbstractThrownTrident;
 import net.iskyla.abyss.entity.trident.FancyThrownTrident;
 import net.minecraft.core.registries.Registries;
@@ -29,6 +30,14 @@ public class EntityRegistry {
 							.eyeHeight(0.13F)
 							.clientTrackingRange(4)
 							.updateInterval(20)
+			);
+
+	public static final Supplier<EntityType<BonefishEntity>> BONEFISH =
+			register(
+					"bonefish",
+					BonefishEntity::new,
+					MobCategory.CREATURE,
+					(b) -> b.sized(0.5f, 0.5f)
 			);
 
 
