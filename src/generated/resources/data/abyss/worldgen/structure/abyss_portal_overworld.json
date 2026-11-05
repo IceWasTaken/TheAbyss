@@ -1,0 +1,11 @@
+{
+  "type": "abyss:abyss_portal_overworld",
+  "biomes": "#c:is_deep_ocean",
+  "spawn_overrides": {
+    "underground_water_creature": {
+      "bounding_box": "full",
+      "spawns": []
+    }
+  },
+  "step": "surface_structures"
+}

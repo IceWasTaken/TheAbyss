@@ -1,0 +1,8 @@
+{
+  "type": "abyss:test_feature",
+  "config": {
+    "baseRadius": 5,
+    "height": 16,
+    "splitCount": 4
+  }
+}

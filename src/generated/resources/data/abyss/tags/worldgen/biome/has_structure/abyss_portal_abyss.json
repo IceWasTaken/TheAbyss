@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "abyss:abyssal_arches",
+      "required": false
+    },
+    {
+      "id": "abyss:abyssal_caves",
+      "required": false
+    },
+    {
+      "id": "abyss:abyssal_oasis",
+      "required": false
+    },
+    {
+      "id": "abyss:abyssal_vents",
+      "required": false
+    }
+  ]
+}

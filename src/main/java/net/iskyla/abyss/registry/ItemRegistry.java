@@ -1,11 +1,13 @@
 package net.iskyla.abyss.registry;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.item.ChasmLocator;
 import net.iskyla.abyss.item.GenericTrident;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -20,8 +22,6 @@ public class ItemRegistry {
 
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Abyss.MODID);
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Abyss.MODID);
-
-	public static final List<DeferredItem<?>> ITEM_LIST = new ArrayList<>();
 
 	public static final DeferredItem<BlockItem> AQUASLATE = register("aquaslate", BlockRegistry.AQUASLATE);
 	public static final DeferredItem<BlockItem> AQUASLATE_SLAB = register("aquaslate_slab", BlockRegistry.AQUASLATE_SLAB);
@@ -77,14 +77,14 @@ public class ItemRegistry {
 	public static final DeferredItem<BlockItem> DEAD_WHITE_CORAL_WALL_FAN = register("dead_white_coral_wall_fan", BlockRegistry.DEAD_WHITE_CORAL_WALL_FAN);
 	public static final DeferredItem<BlockItem> DEAD_BLACK_CORAL_WALL_FAN = register("dead_black_coral_wall_fan", BlockRegistry.DEAD_BLACK_CORAL_WALL_FAN);
 
-	public static final DeferredItem<BlockItem> ORANGE_CORAL_BLOCK = register("orange_coral_block", BlockRegistry.ORANGE_CORAL_BLOCK);
-	public static final DeferredItem<BlockItem> LIME_CORAL_BLOCK = register("lime_coral_block", BlockRegistry.LIME_CORAL_BLOCK);
+	public static final DeferredItem<BlockItem> GINGER_CORAL_BLOCK = register("ginger_coral_block", BlockRegistry.GINGER_CORAL_BLOCK);
+	public static final DeferredItem<BlockItem> SPOTTED_CORAL_BLOCK = register("spotted_coral_block", BlockRegistry.SPOTTED_CORAL_BLOCK);
 	public static final DeferredItem<BlockItem> GREEN_CORAL_BLOCK = register("green_coral_block", BlockRegistry.GREEN_CORAL_BLOCK);
 	public static final DeferredItem<BlockItem> CYAN_CORAL_BLOCK = register("cyan_coral_block", BlockRegistry.CYAN_CORAL_BLOCK);
-	public static final DeferredItem<BlockItem> LIGHT_BLUE_CORAL_BLOCK = register("light_blue_coral_block", BlockRegistry.LIGHT_BLUE_CORAL_BLOCK);
+	public static final DeferredItem<BlockItem> SQUID_CORAL_BLOCK = register("light_blue_coral_block", BlockRegistry.SQUID_CORAL_BLOCK);
 	public static final DeferredItem<BlockItem> CUBIC_CORAL_BLOCK = register("cubic_coral_block", BlockRegistry.CUBIC_CORAL_BLOCK);
-	public static final DeferredItem<BlockItem> WHITE_CORAL_BLOCK = register("white_coral_block", BlockRegistry.WHITE_CORAL_BLOCK);
-	public static final DeferredItem<BlockItem> BLACK_CORAL_BLOCK = register("black_coral_block", BlockRegistry.BLACK_CORAL_BLOCK);
+	public static final DeferredItem<BlockItem> GHOST_CORAL_BLOCK = register("white_coral_block", BlockRegistry.GHOST_CORAL_BLOCK);
+	public static final DeferredItem<BlockItem> WIRE_CORAL_BLOCK = register("black_coral_block", BlockRegistry.WIRE_CORAL_BLOCK);
 
 	public static final DeferredItem<BlockItem> ORANGE_CORAL_PLANT = register("orange_coral_plant", BlockRegistry.ORANGE_CORAL_PLANT);
 	public static final DeferredItem<BlockItem> LIME_CORAL_PLANT = register("lime_coral_plant", BlockRegistry.LIME_CORAL_PLANT);
@@ -113,6 +113,9 @@ public class ItemRegistry {
 	public static final DeferredItem<BlockItem> WHITE_CORAL_WALL_FAN = register("white_coral_wall_fan", BlockRegistry.WHITE_CORAL_WALL_FAN);
 	public static final DeferredItem<BlockItem> BLACK_CORAL_WALL_FAN = register("black_coral_wall_fan", BlockRegistry.BLACK_CORAL_WALL_FAN);
 
+	public static final DeferredItem<BlockItem> ABYSS_PORTAL = register("abyss_portal", BlockRegistry.ABYSS_PORTAL);
+	public static final DeferredItem<ChasmLocator> CHASM_LOCATOR = register("chasm_locator", () -> new ChasmLocator(new Item.Properties()));
+
 	public static final DeferredItem<GenericTrident> FANCY_TRIDENT = register("fancy_trident", () -> new GenericTrident(
 			new Item.Properties()
 					.rarity(Rarity.RARE)
@@ -123,13 +126,11 @@ public class ItemRegistry {
 
 	private static <T extends Item> DeferredItem<T> register(String id, Supplier<T> supplier) {
 		DeferredItem<T> dummy = ITEMS.register(id, supplier);
-		ITEM_LIST.add(dummy);
 		return dummy;
 	}
 
 	private static DeferredItem<BlockItem> register(String id, DeferredBlock<?> block) {
 		DeferredItem<BlockItem> dummy = ITEMS.registerSimpleBlockItem(id, block);
-		ITEM_LIST.add(dummy);
 		return dummy;
 	}
 
@@ -138,9 +139,12 @@ public class ItemRegistry {
 					.title(Component.translatable("itemGroup.abyss"))
 					.icon(() -> AQUASLATE.get().getDefaultInstance()).displayItems(
 							(itemDisplayParameters, output) -> {
-								for(DeferredItem<?> item : ITEM_LIST) {
-									output.accept(item);
-								}
+								//...
+								//...
+								//since when has there been just casually an iterator built into deferred registers
+								ITEMS.getEntries().forEach(entry -> {
+									output.accept(entry.get());
+								});
 							}
 					).build()
 	);

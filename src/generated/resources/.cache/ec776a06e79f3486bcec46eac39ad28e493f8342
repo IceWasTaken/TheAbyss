@@ -1,4 +1,5 @@
-// 1.21.1	2026-10-29T17:01:13.152936842	Block States: abyss
+// 1.21.1	2026-11-01T18:20:19.776269243	Block States: abyss
+947714b71c8636e1ce67f537711988a0a7dc6aee assets/abyss/blockstates/abyss_portal.json
 bb2c68a5b5b81e863fc3795819c031ed04f611b7 assets/abyss/blockstates/aquaslate.json
 0d709eff82b1b3964c236fa49c82bfa0910c9b8a assets/abyss/blockstates/aquaslate_diamond.json
 c3ce0d9eef84a0048a0d1d6f0fe7ea886df8dbe6 assets/abyss/blockstates/aquaslate_gold.json
@@ -15,6 +16,7 @@ a1fe6cda097c5cd458b4121d1a391087764c3827 assets/abyss/blockstates/prismatic_rock
 aeecaf8f640d382c1a474897cead1b02f062c266 assets/abyss/blockstates/prismatic_rock_wall.json
 c38137de1c41e79254c8a5e6fa8b0813b691de84 assets/abyss/blockstates/yellow_kelp.json
 45da70413fe3775ba3e39cf579701925c83f81ea assets/abyss/blockstates/yellow_kelp_plant.json
+c76b9b22f98d7a5a440802f1131fc10aee40f8c2 assets/abyss/models/block/abyss_portal.json
 0db1f11ae0ba8cd5362c4632af467341ee91ef5d assets/abyss/models/block/aquaslate.json
 1bbe1c80d5fa47f3cd7bc741228e2bb4ac989693 assets/abyss/models/block/aquaslate_diamond.json
 b7b463eacde4a7e4f6fa1d4d95b638a7ec8535be assets/abyss/models/block/aquaslate_gold.json
@@ -41,6 +43,7 @@ efef0fbc321c492617883a61f115d89cfe9e4a37 assets/abyss/models/block/prismatic_roc
 8aab47bd1f8db800f249dac0665649b8495453d6 assets/abyss/models/block/prismatic_rock_wall_side_tall.json
 67a79f874ef332cdf9549b30a0b5bf6e6a8c531c assets/abyss/models/block/yellow_kelp.json
 378308a824f091e461778a3a0a353657e3b0f36b assets/abyss/models/block/yellow_kelp_plant.json
+d66d59ea33586208f5eab09c1d21f88e5ccd0d95 assets/abyss/models/item/abyss_portal.json
 50b787adcbd36333863a4fd104e982bf6b1fa59e assets/abyss/models/item/aquaslate.json
 618fc48179922d001ff0ce12786e8aa2e4520abb assets/abyss/models/item/aquaslate_diamond.json
 43131a7136e788324df78d63a3019f53f307a9ae assets/abyss/models/item/aquaslate_gold.json

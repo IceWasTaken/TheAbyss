@@ -109,6 +109,8 @@ public class BlockStateDatagen extends BlockStateProvider {
 //		coralFan(BlockRegistry.CUBIC_CORAL_WALL_FAN);
 //		coralFan(BlockRegistry.WHITE_CORAL_WALL_FAN);
 //		coralFan(BlockRegistry.BLACK_CORAL_WALL_FAN);
+
+		cubeAllWithItem(BlockRegistry.ABYSS_PORTAL, "translucent");
 	}
 
 	private ResourceLocation blockTexture(DeferredBlock<?> block) {
@@ -117,6 +119,14 @@ public class BlockStateDatagen extends BlockStateProvider {
 
 	private void cubeAllWithItem(DeferredBlock<?> block) {
 		simpleBlockWithItem(block.get(), cubeAll(block.get()));
+	}
+	private void cubeAllWithItem(DeferredBlock<?> block, String renderType) {
+		simpleBlockWithItem(block.get(), models().cubeAll(
+						BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+						blockTexture(block.get())
+				)
+				.renderType(renderType)
+		);
 	}
 
 	private void cross(DeferredBlock<?> block) {

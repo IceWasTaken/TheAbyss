@@ -14,20 +14,20 @@ import net.minecraft.world.level.Level;
 public class AbyssDevTeleportCommand {
 
 	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
-		dispatcher.register(
-				Commands.literal("abyssteleport")
-						.then(Commands.argument("x", IntegerArgumentType.integer())
-						.then(Commands.argument("y", IntegerArgumentType.integer())
-						.then(Commands.argument("z", IntegerArgumentType.integer())
-						.executes((stack) -> {
-							teleport(stack.getSource(),
-									IntegerArgumentType.getInteger(stack, "x"),
-									IntegerArgumentType.getInteger(stack, "y"),
-									IntegerArgumentType.getInteger(stack, "z")
-							);
-							return Command.SINGLE_SUCCESS;
-						}))))
-		);
+//		dispatcher.register(
+//				Commands.literal("abyssteleport")
+//						.then(Commands.argument("x", IntegerArgumentType.integer())
+//						.then(Commands.argument("y", IntegerArgumentType.integer())
+//						.then(Commands.argument("z", IntegerArgumentType.integer())
+//						.executes((stack) -> {
+//							teleport(stack.getSource(),
+//									IntegerArgumentType.getInteger(stack, "x"),
+//									IntegerArgumentType.getInteger(stack, "y"),
+//									IntegerArgumentType.getInteger(stack, "z")
+//							);
+//							return Command.SINGLE_SUCCESS;
+//						}))))
+//		);
 	}
 
 	public static void teleport(CommandSourceStack source, int x, int y, int z) {

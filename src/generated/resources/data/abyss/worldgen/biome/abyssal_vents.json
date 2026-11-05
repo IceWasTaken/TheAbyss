@@ -7,7 +7,17 @@
     "water_color": 1,
     "water_fog_color": 1
   },
-  "features": [],
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "abyss:small_abyssal_vent",
+      "abyss:medium_abyssal_vent",
+      "abyss:large_abyssal_vent"
+    ]
+  ],
   "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
@@ -20,5 +30,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 2.0
+  "temperature": 1.6
 }

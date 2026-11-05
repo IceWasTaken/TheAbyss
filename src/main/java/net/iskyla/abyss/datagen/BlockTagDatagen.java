@@ -27,5 +27,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 				.add(BlockRegistry.AQUASLATE_WALL.get())
 				.add(BlockRegistry.PRISMATIC_ROCK_WALL.get());
 
+		tag(BlockTags.PORTALS)
+				.add(BlockRegistry.ABYSS_PORTAL.get());
+
 	}
 }

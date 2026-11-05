@@ -1,0 +1,16 @@
+{
+  "type": "abyss:abyss_portal_abyss",
+  "biomes": [
+    "abyss:abyssal_arches",
+    "abyss:abyssal_caves",
+    "abyss:abyssal_oasis",
+    "abyss:abyssal_vents"
+  ],
+  "spawn_overrides": {
+    "underground_water_creature": {
+      "bounding_box": "full",
+      "spawns": []
+    }
+  },
+  "step": "surface_structures"
+}

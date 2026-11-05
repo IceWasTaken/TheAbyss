@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 8673414,
+    "separation": 4,
+    "spacing": 33,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "abyss:abyss_portal_abyss",
+      "weight": 1
+    }
+  ]
+}

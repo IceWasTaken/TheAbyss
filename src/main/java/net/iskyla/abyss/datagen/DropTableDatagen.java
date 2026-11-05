@@ -7,9 +7,11 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.Set;
+import java.util.function.Function;
 
 public class DropTableDatagen extends BlockLootSubProvider {
     public DropTableDatagen(HolderLookup.Provider registries) {
@@ -77,14 +79,14 @@ public class DropTableDatagen extends BlockLootSubProvider {
 		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_WALL_FAN);
 		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_WALL_FAN);
 
-		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_BLOCK);
+		dropWhenSilkTouch(BlockRegistry.GINGER_CORAL_BLOCK);
+		dropWhenSilkTouch(BlockRegistry.SPOTTED_CORAL_BLOCK);
 		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_BLOCK);
 		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_BLOCK);
+		dropWhenSilkTouch(BlockRegistry.SQUID_CORAL_BLOCK);
         dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_BLOCK);
+		dropWhenSilkTouch(BlockRegistry.GHOST_CORAL_BLOCK);
+		dropWhenSilkTouch(BlockRegistry.WIRE_CORAL_BLOCK);
 
 		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_PLANT);
 		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_PLANT);
@@ -113,12 +115,19 @@ public class DropTableDatagen extends BlockLootSubProvider {
 		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_WALL_FAN);
 		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_WALL_FAN);
 
+		add(BlockRegistry.HYDROTHERMAL_VENT, (b) -> noDrop());
 
     }
 
     private void dropWhenSilkTouch(DeferredBlock<?> block) {
         dropWhenSilkTouch(block.get());
     }
+
+	//can't be bothered to add .get() to every single block
+	//-iskyla
+	private void add(DeferredBlock<?> block, Function<Block, LootTable.Builder> drop) {
+		add(block.get(), drop);
+	}
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

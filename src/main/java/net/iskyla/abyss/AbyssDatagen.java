@@ -1,6 +1,7 @@
 package net.iskyla.abyss;
 
 import net.iskyla.abyss.datagen.*;
+import net.iskyla.abyss.worldgen.biome.BiomeTagDatagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -23,11 +24,12 @@ public class AbyssDatagen {
 
 
 		gen.addProvider(event.includeClient(), new DatapackDatagen(packOut, lookupProvider));
-
+		gen.addProvider(event.includeClient(), new ParticleDatagen(packOut, existingFileHelper));
 		gen.addProvider(event.includeClient(), new BlockStateDatagen(packOut, existingFileHelper));
 		gen.addProvider(event.includeClient(), new ItemModelDatagen(packOut, existingFileHelper));
+
 		gen.addProvider(event.includeServer(), new DropTableProvider(packOut, lookupProvider));
 		gen.addProvider(event.includeServer(), new BlockTagDatagen(packOut, lookupProvider, existingFileHelper));
-
+		gen.addProvider(event.includeServer(), new BiomeTagDatagen(packOut, lookupProvider, existingFileHelper));
 	}
 }

@@ -1,6 +1,8 @@
 package net.iskyla.abyss.registry;
 
 import net.iskyla.abyss.Abyss;
+import net.iskyla.abyss.block.AbyssPortalBlock;
+import net.iskyla.abyss.block.VentSmokeSourceBlock;
 import net.iskyla.abyss.block.YellowKelpBlock;
 import net.iskyla.abyss.block.YellowKelpPlantBlock;
 import net.minecraft.world.level.block.*;
@@ -34,22 +36,11 @@ public class BlockRegistry {
 	public static final DeferredBlock<Block> AQUASLATE_DIAMOND = register("aquaslate_diamond", () -> new Block(BlockBehaviour.Properties.of().destroyTime(1.2f)));
 
 	public static final DeferredBlock<YellowKelpBlock> YELLOW_KELP = register("yellow_kelp", () -> new YellowKelpBlock(
-			BlockBehaviour.Properties.of()
-					.mapColor(MapColor.WATER)
-					.noCollission()
-					.randomTicks()
-					.instabreak()
-					.sound(SoundType.WET_GRASS)
-					.pushReaction(PushReaction.DESTROY)
+			BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().randomTicks().instabreak().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)
 	));
 
 	public static final DeferredBlock<YellowKelpPlantBlock> YELLOW_KELP_PLANT = register("yellow_kelp_plant", () -> new YellowKelpPlantBlock(
-		BlockBehaviour.Properties.of()
-				.mapColor(MapColor.WATER)
-				.noCollission()
-				.instabreak()
-				.sound(SoundType.WET_GRASS)
-				.pushReaction(PushReaction.DESTROY)
+		BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)
 	));
 
 	private static final BlockBehaviour.Properties DEAD_CORAL_PROPERTIES = BlockBehaviour.Properties
@@ -113,14 +104,14 @@ public class BlockRegistry {
 	public static final DeferredBlock<BaseCoralWallFanBlock> DEAD_WHITE_CORAL_WALL_FAN = register("dead_white_coral_wall_fan", () -> new BaseCoralWallFanBlock(DEAD_CORAL_PLANT_PROPERTIES));
 	public static final DeferredBlock<BaseCoralWallFanBlock> DEAD_BLACK_CORAL_WALL_FAN = register("dead_black_coral_wall_fan", () -> new BaseCoralWallFanBlock(DEAD_CORAL_PLANT_PROPERTIES));
 
-	public static final DeferredBlock<CoralBlock> ORANGE_CORAL_BLOCK = register("orange_coral_block", () -> new CoralBlock(DEAD_ORANGE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_ORANGE)));
-	public static final DeferredBlock<CoralBlock> LIME_CORAL_BLOCK = register("lime_coral_block", () -> new CoralBlock(DEAD_LIME_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_LIGHT_GREEN)));
+	public static final DeferredBlock<CoralBlock> GINGER_CORAL_BLOCK = register("ginger_coral_block", () -> new CoralBlock(DEAD_ORANGE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_ORANGE)));
+	public static final DeferredBlock<CoralBlock> SPOTTED_CORAL_BLOCK = register("spotted_coral_block", () -> new CoralBlock(DEAD_LIME_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_LIGHT_GREEN)));
 	public static final DeferredBlock<CoralBlock> GREEN_CORAL_BLOCK = register("green_coral_block", () -> new CoralBlock(DEAD_GREEN_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_GREEN)));
 	public static final DeferredBlock<CoralBlock> CYAN_CORAL_BLOCK = register("cyan_coral_block", () -> new CoralBlock(DEAD_CYAN_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_CYAN)));
-	public static final DeferredBlock<CoralBlock> LIGHT_BLUE_CORAL_BLOCK = register("light_blue_coral_block", () -> new CoralBlock(DEAD_LIGHT_BLUE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_LIGHT_BLUE)));
+	public static final DeferredBlock<CoralBlock> SQUID_CORAL_BLOCK = register("squid_coral_block", () -> new CoralBlock(DEAD_LIGHT_BLUE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_LIGHT_BLUE)));
 	public static final DeferredBlock<CoralBlock> CUBIC_CORAL_BLOCK = register("cubic_coral_block", () -> new CoralBlock(DEAD_CUBIC_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_PURPLE)));
-	public static final DeferredBlock<CoralBlock> WHITE_CORAL_BLOCK = register("white_coral_block", () -> new CoralBlock(DEAD_WHITE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.TERRACOTTA_WHITE)));
-	public static final DeferredBlock<CoralBlock> BLACK_CORAL_BLOCK = register("black_coral_block", () -> new CoralBlock(DEAD_BLACK_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_BLACK)));
+	public static final DeferredBlock<CoralBlock> GHOST_CORAL_BLOCK = register("ghost_coral_block", () -> new CoralBlock(DEAD_WHITE_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.TERRACOTTA_WHITE)));
+	public static final DeferredBlock<CoralBlock> WIRE_CORAL_BLOCK = register("wire_coral_block", () -> new CoralBlock(DEAD_BLACK_CORAL_BLOCK.get(), coralProperties().mapColor(MapColor.COLOR_BLACK)));
 
 	public static final DeferredBlock<CoralPlantBlock> ORANGE_CORAL_PLANT = register("orange_coral_plant", () -> new CoralPlantBlock(DEAD_ORANGE_CORAL_PLANT.get(), coralPlantProperties().mapColor(MapColor.COLOR_ORANGE)));
 	public static final DeferredBlock<CoralPlantBlock> LIME_CORAL_PLANT = register("lime_coral_plant", () -> new CoralPlantBlock(DEAD_LIME_CORAL_PLANT.get(), coralPlantProperties().mapColor(MapColor.COLOR_LIGHT_GREEN)));
@@ -148,6 +139,9 @@ public class BlockRegistry {
 	public static final DeferredBlock<CoralWallFanBlock> CUBIC_CORAL_WALL_FAN = register("cubic_coral_wall_fan", () -> new CoralWallFanBlock(DEAD_CUBIC_CORAL_WALL_FAN.get(), coralPlantProperties().mapColor(MapColor.COLOR_PURPLE)));
 	public static final DeferredBlock<CoralWallFanBlock> WHITE_CORAL_WALL_FAN = register("white_coral_wall_fan", () -> new CoralWallFanBlock(DEAD_WHITE_CORAL_WALL_FAN.get(), coralPlantProperties().mapColor(MapColor.TERRACOTTA_WHITE)));
 	public static final DeferredBlock<CoralWallFanBlock> BLACK_CORAL_WALL_FAN = register("black_coral_wall_fan", () -> new CoralWallFanBlock(DEAD_BLACK_CORAL_WALL_FAN.get(), coralPlantProperties().mapColor(MapColor.COLOR_BLACK)));
+
+	public static final DeferredBlock<VentSmokeSourceBlock> HYDROTHERMAL_VENT = register("hydrothermal_vent", () -> new VentSmokeSourceBlock(BlockBehaviour.Properties.of()));
+	public static final DeferredBlock<AbyssPortalBlock> ABYSS_PORTAL = register("abyss_portal", () -> new AbyssPortalBlock(BlockBehaviour.Properties.of().noCollission().forceSolidOn().strength(-1f, 3600000f).pushReaction(PushReaction.BLOCK).noLootTable().randomTicks().noOcclusion()));
 
 	private static <T extends Block> DeferredBlock<T> register(String name, Supplier<T> supplier) {
 		return BLOCKS.register(name, supplier);

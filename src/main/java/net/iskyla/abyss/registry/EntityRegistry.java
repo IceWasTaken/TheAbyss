@@ -32,9 +32,6 @@ public class EntityRegistry {
 			);
 
 
-
-
-
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String name, EntityType.EntityFactory<T> factory, MobCategory category, UnaryOperator<EntityType.Builder<T>> builder) {
 		return ENTITIES.register(
 				name,
