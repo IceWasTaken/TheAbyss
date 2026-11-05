@@ -45,7 +45,6 @@ public class VentSmokeSourceBlockEntity extends BlockEntity {
 		for(Entity entity : level.getEntities(null, box)) {
 			if(entity instanceof LivingEntity livingEntity) {
 				livingEntity.addEffect(new MobEffectInstance(MobEffects.POISON, 5, 1));
-				livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 5, 0));
 				livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 5, 0));
 				livingEntity.hurt(level.damageSources().magic(), 1f);
 			}

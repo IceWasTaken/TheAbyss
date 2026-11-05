@@ -67,7 +67,7 @@ public class AbyssPortalAbyssStructure extends Structure {
 						context.registryAccess().registryOrThrow(Registries.TEMPLATE_POOL).getHolderOrThrow(StructureTemplatePoolDatagen.ABYSS_PORTAL_ABYSS),
 						Optional.of(ResourceLocation.withDefaultNamespace("center")),
 						1,
-						new BlockPos(i, startY - 4, j),
+						new BlockPos(i, startY, j),
 						false,
 						Optional.of(Heightmap.Types.OCEAN_FLOOR_WG),
 						128,
