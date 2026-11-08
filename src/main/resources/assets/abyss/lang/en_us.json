@@ -2,17 +2,23 @@
   "itemGroup.abyss": "The Abyss",
 
   "block.abyss.aquaslate": "Aquaslate",
+  "block.abyss.aquaslate_slab": "Aquaslate Slab",
+  "block.abyss.aquaslate_stairs": "Aquaslate Stairs",
+  "block.abyss.aquaslate_wall": "Aquaslate Wall",
+
   "block.abyss.prismatic_rock": "Prismatic Rock",
+  "block.abyss.prismatic_rock_slab": "Prismatic Rock Slab",
+  "block.abyss.prismatic_rock_stairs": "Prismatic Rock Stairs",
+  "block.abyss.prismatic_rock_wall": "Prismatic Rock Wall",
+
+  "block.abyss.abyss_portal": "Abyss Portal",
+
   "block.abyss.yellow_kelp": "Yellow Kelp",
   "block.abyss.yellow_kelp_plant": "Yellow Kelp",
   "block.abyss.aquaslate_diamond": "Aquaslate Diamond Ore",
   "block.abyss.aquaslate_gold": "Aquaslate Gold Ore",
   "block.abyss.aquaslate_iron": "Aquaslate Iron Ore",
   "block.abyss.aquaslate_redstone": "Aquaslate Redstone Ore",
-  "block.abyss.aquaslate_lapis": "Aquaslate Lapis Ore",
+  "block.abyss.aquaslate_lapis": "Aquaslate Lapis Ore"
 
-
-  "item.abyss.aquaslate": "Aquaslate",
-  "item.abyss.prismatic_rock": "Prismatic Rock",
-  "item.abyss.yellow_kelp": "Yellow Kelp"
 }

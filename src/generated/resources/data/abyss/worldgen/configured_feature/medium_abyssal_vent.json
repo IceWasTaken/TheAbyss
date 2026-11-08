@@ -1,5 +1,5 @@
 {
-  "type": "abyss:test_feature",
+  "type": "abyss:hydrothermal_vent",
   "config": {
     "baseRadius": 4,
     "height": 12,

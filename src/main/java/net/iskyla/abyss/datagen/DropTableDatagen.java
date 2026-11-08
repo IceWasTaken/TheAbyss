@@ -43,77 +43,77 @@ public class DropTableDatagen extends BlockLootSubProvider {
         dropSelf(BlockRegistry.YELLOW_KELP.get());
         dropOther(BlockRegistry.YELLOW_KELP_PLANT.get(), BlockRegistry.YELLOW_KELP.get());
 
-        dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_BLOCK);
-        dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_BLOCK);
-
-		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_PLANT);
-
-		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_FAN);
-
-		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_WALL_FAN);
-
-		dropWhenSilkTouch(BlockRegistry.GINGER_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.SPOTTED_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.SQUID_CORAL_BLOCK);
-        dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.GHOST_CORAL_BLOCK);
-		dropWhenSilkTouch(BlockRegistry.WIRE_CORAL_BLOCK);
-
-		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_PLANT);
-		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_PLANT);
-
-		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_FAN);
-		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_FAN);
-
-		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_WALL_FAN);
-		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_WALL_FAN);
+//        dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_BLOCK);
+//        dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_BLOCK);
+//
+//		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_PLANT);
+//
+//		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_FAN);
+//
+//		dropWhenSilkTouch(BlockRegistry.DEAD_ORANGE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIME_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_GREEN_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CYAN_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_LIGHT_BLUE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_CUBIC_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_WHITE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.DEAD_BLACK_CORAL_WALL_FAN);
+//
+//		dropWhenSilkTouch(BlockRegistry.GINGER_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.SPOTTED_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.SQUID_CORAL_BLOCK);
+//        dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.GHOST_CORAL_BLOCK);
+//		dropWhenSilkTouch(BlockRegistry.WIRE_CORAL_BLOCK);
+//
+//		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_PLANT);
+//		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_PLANT);
+//
+//		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_FAN);
+//
+//		dropWhenSilkTouch(BlockRegistry.ORANGE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.LIME_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.GREEN_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.CYAN_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.LIGHT_BLUE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.CUBIC_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.WHITE_CORAL_WALL_FAN);
+//		dropWhenSilkTouch(BlockRegistry.BLACK_CORAL_WALL_FAN);
 
 		add(BlockRegistry.HYDROTHERMAL_VENT, (b) -> noDrop());
 

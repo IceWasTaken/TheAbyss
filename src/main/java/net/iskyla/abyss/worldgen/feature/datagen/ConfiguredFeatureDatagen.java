@@ -27,7 +27,7 @@ public class ConfiguredFeatureDatagen {
 		context.register(
 				SMALL_ABYSSAL_VENT,
 				new ConfiguredFeature<>(
-						FeatureRegistry.TEST_FEATURE.get(),
+						FeatureRegistry.HYDROTHERMAL_VENT.get(),
 						new HydrothermalVentFeatureConfiguration(
 								3,
 								8,
@@ -39,7 +39,7 @@ public class ConfiguredFeatureDatagen {
 		context.register(
 				MEDIUM_ABYSSAL_VENT,
 				new ConfiguredFeature<>(
-						FeatureRegistry.TEST_FEATURE.get(),
+						FeatureRegistry.HYDROTHERMAL_VENT.get(),
 						new HydrothermalVentFeatureConfiguration(
 								4,
 								12,
@@ -52,7 +52,7 @@ public class ConfiguredFeatureDatagen {
 		context.register(
 				LARGE_ABYSSAL_VENT,
 				new ConfiguredFeature<>(
-						FeatureRegistry.TEST_FEATURE.get(),
+						FeatureRegistry.HYDROTHERMAL_VENT.get(),
 						new HydrothermalVentFeatureConfiguration(
 								5,
 								16,

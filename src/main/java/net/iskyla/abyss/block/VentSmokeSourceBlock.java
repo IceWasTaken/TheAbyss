@@ -10,12 +10,14 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class VentSmokeSourceBlock extends BaseEntityBlock {
+public class VentSmokeSourceBlock extends Block implements EntityBlock {
 
 	public static final MapCodec<VentSmokeSourceBlock> CODEC = RecordCodecBuilder.mapCodec(
 			(instance) -> instance.group(
@@ -58,7 +60,11 @@ public class VentSmokeSourceBlock extends BaseEntityBlock {
 	}
 
 	@Override
-	protected MapCodec<? extends BaseEntityBlock> codec() {
+	protected MapCodec<VentSmokeSourceBlock> codec() {
 		return CODEC;
+	}
+
+	protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(BlockEntityType<A> actualType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
+		return expectedType == actualType ? (BlockEntityTicker<A>) ticker : null;
 	}
 }

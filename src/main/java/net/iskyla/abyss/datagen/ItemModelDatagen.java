@@ -31,6 +31,7 @@ public class ItemModelDatagen extends ItemModelProvider {
 		simpleBlockItem(BlockRegistry.AQUASLATE_REDSTONE);
 		simpleBlockItem(BlockRegistry.AQUASLATE_LAPIS);
 		simpleBlockItem(BlockRegistry.AQUASLATE_DIAMOND);
+		simpleBlockItem(BlockRegistry.HYDROTHERMAL_VENT);
 
 		flatBlockItem(BlockRegistry.YELLOW_KELP);
 		flatBlockItem(BlockRegistry.YELLOW_KELP_PLANT);
@@ -78,7 +79,7 @@ public class ItemModelDatagen extends ItemModelProvider {
 //		simpleBlockItem(BlockRegistry.GREEN_CORAL_BLOCK);
 //		simpleBlockItem(BlockRegistry.CYAN_CORAL_BLOCK);
 //		simpleBlockItem(BlockRegistry.LIGHT_BLUE_CORAL_BLOCK);
-		simpleBlockItem(BlockRegistry.CUBIC_CORAL_BLOCK);
+//		simpleBlockItem(BlockRegistry.CUBIC_CORAL_BLOCK);
 //		simpleBlockItem(BlockRegistry.WHITE_CORAL_BLOCK);
 //		simpleBlockItem(BlockRegistry.BLACK_CORAL_BLOCK);
 

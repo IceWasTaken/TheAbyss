@@ -27,6 +27,8 @@ public class BlockStateDatagen extends BlockStateProvider {
 		stairsBlock(BlockRegistry.PRISMATIC_ROCK_STAIRS.get(), blockTexture(BlockRegistry.PRISMATIC_ROCK));
 		wallBlock(BlockRegistry.PRISMATIC_ROCK_WALL.get(), blockTexture(BlockRegistry.PRISMATIC_ROCK));
 
+		cubeAllWithItem(BlockRegistry.HYDROTHERMAL_VENT);
+
 		cubeAllWithItem(BlockRegistry.AQUASLATE_IRON);
 		cubeAllWithItem(BlockRegistry.AQUASLATE_GOLD);
 		cubeAllWithItem(BlockRegistry.AQUASLATE_REDSTONE);
@@ -79,7 +81,7 @@ public class BlockStateDatagen extends BlockStateProvider {
 //		cubeAllWithItem(BlockRegistry.GREEN_CORAL_BLOCK);
 //		cubeAllWithItem(BlockRegistry.CYAN_CORAL_BLOCK);
 //		cubeAllWithItem(BlockRegistry.LIGHT_BLUE_CORAL_BLOCK);
-		cubeAllWithItem(BlockRegistry.CUBIC_CORAL_BLOCK);
+//		cubeAllWithItem(BlockRegistry.CUBIC_CORAL_BLOCK);
 //		cubeAllWithItem(BlockRegistry.WHITE_CORAL_BLOCK);
 //		cubeAllWithItem(BlockRegistry.BLACK_CORAL_BLOCK);
 

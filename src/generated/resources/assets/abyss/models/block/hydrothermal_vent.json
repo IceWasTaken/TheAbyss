@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "abyss:block/cubic_coral_block"
+    "all": "abyss:block/hydrothermal_vent"
   }
 }

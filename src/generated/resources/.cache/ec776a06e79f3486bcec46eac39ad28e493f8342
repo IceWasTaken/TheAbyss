@@ -1,4 +1,4 @@
-// 1.21.1	2026-11-01T18:20:19.776269243	Block States: abyss
+// 1.21.1	2026-11-07T19:00:40.779194873	Block States: abyss
 947714b71c8636e1ce67f537711988a0a7dc6aee assets/abyss/blockstates/abyss_portal.json
 bb2c68a5b5b81e863fc3795819c031ed04f611b7 assets/abyss/blockstates/aquaslate.json
 0d709eff82b1b3964c236fa49c82bfa0910c9b8a assets/abyss/blockstates/aquaslate_diamond.json
@@ -9,7 +9,7 @@ fee9c325d9d7e9ee579ec8d853632f89eca34143 assets/abyss/blockstates/aquaslate_reds
 3b9e01d64e6eb52a221a664060aba7f9ba2bf481 assets/abyss/blockstates/aquaslate_slab.json
 288af4bcd6c7242cb64f356be7f9a87c8c61a6b0 assets/abyss/blockstates/aquaslate_stairs.json
 c00c4367395e07ab2882845421335f9ba39568bd assets/abyss/blockstates/aquaslate_wall.json
-bc04f97a10b316bd97893fd3d6b1dc9abc4cf642 assets/abyss/blockstates/cubic_coral_block.json
+2fe1fa809b894940c3357db88e616e7344d31da2 assets/abyss/blockstates/hydrothermal_vent.json
 0d38ac13acc060844c148d316bc6d6b03ff79066 assets/abyss/blockstates/prismatic_rock.json
 12b4c4291aa0d9ff5e55a0bd1398fbd89eb26642 assets/abyss/blockstates/prismatic_rock_slab.json
 a1fe6cda097c5cd458b4121d1a391087764c3827 assets/abyss/blockstates/prismatic_rock_stairs.json
@@ -31,7 +31,7 @@ d8a34a1573eec8854c1e037b41ca4ae307cfbbf6 assets/abyss/models/block/aquaslate_sta
 99293682420d0901fa696e32e74161de2c666b73 assets/abyss/models/block/aquaslate_wall_post.json
 92db81c97d4c77aee48a9edf2ece105eabacd918 assets/abyss/models/block/aquaslate_wall_side.json
 d6864519640801f036097df8c9d58f40836b0024 assets/abyss/models/block/aquaslate_wall_side_tall.json
-b8b5b7d6259814ce5a291b11b96b89466df425a7 assets/abyss/models/block/cubic_coral_block.json
+f6873712fe7dffa0d0b8933b253d6fec3fef190f assets/abyss/models/block/hydrothermal_vent.json
 94f22503f67a70525ed88244c626351f1f4730c3 assets/abyss/models/block/prismatic_rock.json
 f9f31d4e721e9e1d4a8cc8b57aa87aa3e395e956 assets/abyss/models/block/prismatic_rock_slab.json
 013dc9e9ad5290a180a2ae4cf0d04dafa5d4adb0 assets/abyss/models/block/prismatic_rock_slab_top.json
@@ -50,5 +50,5 @@ d66d59ea33586208f5eab09c1d21f88e5ccd0d95 assets/abyss/models/item/abyss_portal.j
 c099a53402074e8c7867ca846cc7220b43fae380 assets/abyss/models/item/aquaslate_iron.json
 f6279b910c456a530c4235528ebd3f129f143448 assets/abyss/models/item/aquaslate_lapis.json
 277b2005030f70e1546fe8f2c448c46804649a35 assets/abyss/models/item/aquaslate_redstone.json
-35b1b5df88d5fe2f0c000c352c353668c3f90fa2 assets/abyss/models/item/cubic_coral_block.json
+c7302a64ad87f780ec59143c2d8c58fd41e15694 assets/abyss/models/item/hydrothermal_vent.json
 ff8046e2b77323ddb5970829f31ad3eeca6c42b1 assets/abyss/models/item/prismatic_rock.json

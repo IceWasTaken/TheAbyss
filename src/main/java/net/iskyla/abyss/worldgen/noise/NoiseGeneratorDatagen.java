@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.*;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
 import java.util.List;
+import java.util.function.Function;
 
 public class NoiseGeneratorDatagen {
 
@@ -23,6 +24,9 @@ public class NoiseGeneratorDatagen {
 	public static void bootstrapNoiseGenerator(BootstrapContext<NoiseGeneratorSettings> context) {
 		HolderGetter<NormalNoise.NoiseParameters> noiseParameters = context.lookup(Registries.NOISE);
 		HolderGetter<DensityFunction> functions = context.lookup(Registries.DENSITY_FUNCTION);
+
+		Function<ResourceKey<DensityFunction>, DensityFunctions.HolderHolder> getFunction = (funcKey) ->
+				new DensityFunctions.HolderHolder(functions.getOrThrow(funcKey));
 
 		context.register(ABYSS_NOISE_SETTINGS, new NoiseGeneratorSettings(
 				new NoiseSettings(
@@ -47,8 +51,8 @@ public class NoiseGeneratorDatagen {
 						DensityFunctions.constant(0), //initial density w/out jaggedness
 						DensityFunctions.add(
 								DensityFunctions.add(
-										new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionDatagen.ABYSSAL_CEILING_FLOOR_FUNCTION)),
-										new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionDatagen.ABYSSAL_CEILING_FLOOR_TERRAIN_FUNCTION))
+										getFunction.apply(DensityFunctionDatagen.ABYSSAL_CEILING_FLOOR_FUNCTION),
+										getFunction.apply(DensityFunctionDatagen.ABYSSAL_CEILING_FLOOR_TERRAIN_FUNCTION)
 								),
 								new DensityFunctions.HolderHolder(functions.getOrThrow(DensityFunctionDatagen.ABYSSAL_ARCHES_FUNCTION))
 						),
@@ -57,24 +61,8 @@ public class NoiseGeneratorDatagen {
 						DensityFunctions.constant(0)
 				),
 				SurfaceRules.sequence(
-						SurfaceRules.ifTrue(
-								SurfaceRules.verticalGradient(
-										"bedrock_floor",
-										VerticalAnchor.aboveBottom(0),
-										VerticalAnchor.aboveBottom(5)
-								),
-								SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
-						),
-						SurfaceRules.ifTrue(
-								SurfaceRules.not(
-										SurfaceRules.verticalGradient(
-												"bedrock_roof",
-												VerticalAnchor.belowTop(5),
-												VerticalAnchor.belowTop(0)
-										)
-								),
-								SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
-						),
+						Functions.dimensionFloor(Blocks.BEDROCK),
+						Functions.dimensionRoof(Blocks.BEDROCK),
 						SurfaceRules.ifTrue(
 								SurfaceRules.yBlockCheck(
 										VerticalAnchor.belowTop(5),
@@ -99,4 +87,6 @@ public class NoiseGeneratorDatagen {
 				true
 		));
 	}
+
+
 }

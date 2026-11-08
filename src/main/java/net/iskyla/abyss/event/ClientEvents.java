@@ -10,11 +10,9 @@ import net.iskyla.abyss.entity.trident.TridentEntityRenderer;
 import net.iskyla.abyss.particle.ChemicalSoupParticles;
 import net.iskyla.abyss.registry.EntityRegistry;
 import net.iskyla.abyss.registry.ParticleTypeRegistry;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
@@ -27,7 +25,6 @@ public class ClientEvents {
 		event.registerEntityRenderer(EntityRegistry.FANCY_TRIDENT.get(), TridentEntityRenderer::new);
 		event.registerEntityRenderer(EntityRegistry.BONEFISH.get(), BonefishRenderer::new);
 		event.registerEntityRenderer(EntityRegistry.ANGLERFISH.get(), AnglerfishRenderer::new);
-
 	}
 
 	@SubscribeEvent
