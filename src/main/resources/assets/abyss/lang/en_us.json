@@ -19,6 +19,11 @@
   "block.abyss.aquaslate_gold": "Aquaslate Gold Ore",
   "block.abyss.aquaslate_iron": "Aquaslate Iron Ore",
   "block.abyss.aquaslate_redstone": "Aquaslate Redstone Ore",
-  "block.abyss.aquaslate_lapis": "Aquaslate Lapis Ore"
+  "block.abyss.aquaslate_lapis": "Aquaslate Lapis Ore",
 
+  "advancements.abyss.root.title": "The Abyss",
+  "advancements.abyss.root.description": "Welcome to where times stands still",
+
+  "advancements.abyss.enter_abyss.title": "Cosmic Sea",
+  "advancements.abyss.enter_abyss.description": "Enter The Abyss"
 }

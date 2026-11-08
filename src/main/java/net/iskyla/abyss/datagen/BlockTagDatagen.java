@@ -21,7 +21,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 	protected void addTags(HolderLookup.Provider provider) {
 		this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(BlockRegistry.AQUASLATE_DIAMOND.get())
-				.add(BlockRegistry.AQUASLATE.get());
+				.add(BlockRegistry.AQUASLATE.get())
+				.add(BlockRegistry.PRISMATIC_ROCK.get());
 
 		tag(BlockTags.WALLS)
 				.add(BlockRegistry.AQUASLATE_WALL.get())

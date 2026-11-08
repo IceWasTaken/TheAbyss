@@ -31,5 +31,7 @@ public class AbyssDatagen {
 		gen.addProvider(event.includeServer(), new DropTableProvider(packOut, lookupProvider));
 		gen.addProvider(event.includeServer(), new BlockTagDatagen(packOut, lookupProvider, existingFileHelper));
 		gen.addProvider(event.includeServer(), new BiomeTagDatagen(packOut, lookupProvider, existingFileHelper));
+		gen.addProvider(event.includeServer(), new RecipeDatagen(packOut, lookupProvider));
+		gen.addProvider(event.includeServer(), AdvancementDatagen.create(packOut, lookupProvider));
 	}
 }
