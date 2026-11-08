@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "enter_abyss": {
+      "conditions": {
+        "to": "abyss:abyss"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "abyss:textures/block/prismatic_rock.png",
+    "description": {
+      "translate": "advancements.abyss.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "abyss:prismatic_rock"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.abyss.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter_abyss"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

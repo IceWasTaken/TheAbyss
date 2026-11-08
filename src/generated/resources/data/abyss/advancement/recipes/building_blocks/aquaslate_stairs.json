@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_abyss:aquaslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "abyss:aquaslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "abyss:aquaslate_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_abyss:aquaslate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abyss:aquaslate_stairs"
+    ]
+  }
+}

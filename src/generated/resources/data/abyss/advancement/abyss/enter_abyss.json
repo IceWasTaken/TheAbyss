@@ -1,0 +1,30 @@
+{
+  "parent": "abyss:abyss/root",
+  "criteria": {
+    "enter_abyss": {
+      "conditions": {
+        "to": "abyss:abyss"
+      },
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "display": {
+    "background": "abyss:textures/gui/advancements.png",
+    "description": {
+      "translate": "advancements.abyss.enter_abyss.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "abyss:aquaslate"
+    },
+    "title": {
+      "translate": "advancements.abyss.enter_abyss.title"
+    }
+  },
+  "requirements": [
+    [
+      "enter_abyss"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
